@@ -1,0 +1,9 @@
+/------------------------------------------------------------------------/
+/*   FATEC-São Caetano do Sul                 Estrutura de Dados         /
+/                                         Murilo Bastos     		 /
+/                                         Rafael Galindo     		 /
+/             Objetivo: Cadastro de Produtos                             /
+/             Paradigama: programação modular (lista ligada)             /
+/                                                                        /
+/                                                         Data:02/04/2024/
+/------------------------------------------------------------------------*/
