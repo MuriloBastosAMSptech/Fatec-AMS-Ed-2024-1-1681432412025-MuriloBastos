@@ -1,0 +1,24 @@
+/* ----------------------------------------------------------------**
+ * FATEC-São Caetano do Sul Estrutura de Dados *
+ * Atividade B3-1-Cálculo tempo execuçao-Insertion Sort *
+ * Para: Prof Veríssimo * * Objetivo: Tempo de execução *
+ * Autor: Murilo Grillo Bastos      * * Data:13/09/2024 *
+ * --------------------------------------------------------------*/
+
+Custo do Loop Externo: 3t(n) para a execução do loop externo.
+Custo das Atribuições: 2t(n) para as atribuições dentro do loop externo.
+Custo do Loop Interno: 4𝑡(𝑛2) para a execução do loop while e as operações dentro dele.
+Custo da Inserção do Elemento: 3t(n) para a inserção do elemento na parte ordenada.
+
+int *insertion_sort(int arr[], int n) {
+    for (int j = 1; j < n; j++) {         // 3t(n) 
+        int key = arr[j];                // 2t(n)
+        int i = j - 1;                   // 2t(n)
+        while (i >= 0 && arr[i] > key) {  // 4t(n²)
+            arr[i + 1] = arr[i];         // 4t(n²)
+            i -= 1;                      // 2t(n²)
+        }
+        arr[i + 1] = key;                // 3t(n)
+    }
+    return arr;                          // t
+}
