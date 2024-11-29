@@ -1,0 +1,34 @@
+1. Otimização no Bubble Sort (Explicação Resumida): 
+
+*Adicionar uma flag para detectar se houve alguma troca em um ciclo. 
+Se não houve trocas, o array já está ordenado, e podemos interromper a execução antecipadamente, reduzindo o tempo de execução.
+
+Explicação da Melhoria:
+
+- A melhoria introduzida consiste na variável "trocado". Essa variável é utilizada para 
+verificar se houve alguma troca em uma iteração completa do loop externo. Se não houve 
+troca, significa que o array já está ordenado, e podemos interromper o algoritmo, evitando 
+iterações desnecessárias.
+
+Ponto de Melhoria no Código Original e Justificativa:
+
+- Um ponto de melhoria no código original seria a falta de uma verificação para parar o algoritmo quando o array já está ordenado. A implementação apresentada acima corrige 
+essa falha.
+
+Ponto de melhoria (Resumo): O código original não possui uma otimização para parar o algoritmo quando o array já está ordenado, o que pode levar a iterações desnecessárias, especialmente para arrays que já estão quase ordenados.
+
+Justificativa (Resumo): Ao adicionar a variável "trocado" e verificar se houve alguma troca em uma iteração, podemos interromper o algoritmo assim que o array estiver ordenado, melhorando a eficiência, especialmente em casos onde o array já está quase ordenado.
+
+Exemplo:
+
+Considere o array `{2, 3, 4, 5, 1}`:
+
+1. Primeira passagem:
+   - O valor `1` será movido para a primeira posição após várias trocas.
+   - A variável `trocado` será definida como `1` (houve trocas).
+
+2. Segunda passagem:
+   - O algoritmo passa novamente pelo array, mas desta vez não haverá trocas, pois o array já está ordenado.
+   - A variável `trocado` permanecerá `0`, e o algoritmo será interrompido, mesmo que as passagens restantes não sejam executadas.
+
+Sem a otimização, o algoritmo continuaria fazendo n-1 passagens, mesmo após o array estar ordenado. Com a otimização, o algoritmo encerra após a segunda passagem.
